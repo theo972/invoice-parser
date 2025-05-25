@@ -5,9 +5,9 @@ namespace App\Parser;
 use App\Entity\Invoice;
 use Symfony\Component\Serializer\SerializerInterface;
 
-class JsonInvoiceParser
+readonly class JsonInvoiceParser
 {
-    public function __construct(private readonly SerializerInterface $serializer) {
+    public function __construct(private SerializerInterface $serializer) {
     }
 
     public function parse(string $filepath): array

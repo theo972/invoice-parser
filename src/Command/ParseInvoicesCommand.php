@@ -5,7 +5,6 @@ declare(strict_types=1);
 
 namespace App\Command;
 
-use App\Repository\InvoiceRepository;
 use App\Service\InvoiceService;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -34,7 +33,6 @@ class ParseInvoicesCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $filename = (string) $input->getOption('filename');
-//        $this->invoiceService->parse('data/invoices.json');
         $this->invoiceService->parse($filename);
         return Command::SUCCESS;
     }

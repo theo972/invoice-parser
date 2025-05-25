@@ -2,11 +2,11 @@
 
 namespace App\Parser;
 
-class FileParserManager
+readonly class FileParserManager
 {
     public function __construct(
-        private readonly JsonInvoiceParser $jsonParser,
-        private readonly CsvInvoiceParser  $csvParser
+        private JsonInvoiceParser $jsonParser,
+        private CsvInvoiceParser  $csvParser
     ) {}
 
     public function createParser(string $filepath): array

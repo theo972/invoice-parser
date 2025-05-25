@@ -3,7 +3,6 @@
 namespace App\Parser;
 
 use App\Entity\Invoice;
-use Symfony\Component\Serializer\SerializerInterface;
 
 class CsvInvoiceParser
 {
